@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Pseudo Elements-CSS伪元素</title>
-  <base href="/">
+  <title>CSS伪元素-Pseudo Elements</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="author" content="renyun,ry.work@foxmail.com">
   <meta name="keywords" content="html、html5、css、css3">
   <meta name="description" content="Pseudo Elements,css 伪元素">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../assets/favicon.ico">
   <style>
     body {
       padding: 20px;
@@ -36,6 +36,74 @@
     .section-title:hover:before {
         transform: scale(1.2);
     }
+
+    .hero {
+	position: relative;
+}
+
+.hero p {
+	color: #404040;
+}
+
+.hero a {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.link-1 {
+	color: #854FBB;
+}
+
+@media (min-width: 700px) {
+	.link-1:after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 20px;
+		width: 150px;
+		height: 100px;
+		background: currentColor;
+		opacity: 0.85;
+		transition: 0.3s ease-out;
+	}
+
+	.link-1:hover {
+		text-decoration: underline;
+	}
+
+	.link-1:hover:after {
+		transform: scale(1.2);
+		opacity: 1;
+	}
+}
+
+.link-2 {
+	color: #245DC4;
+}
+
+@media (min-width: 700px) {
+	.link-2:after {
+		content: "";
+		position: absolute;
+		right: 50px;
+		top: 60px;
+		width: 150px;
+		height: 100px;
+		background: currentColor;
+		transform: rotate(10deg);
+		opacity: 0.85;
+		transition: 0.3s ease-out;
+	}
+
+	.link-2:hover {
+		text-decoration: underline;
+	}
+
+	.link-2:hover:after {
+		transform: rotate(10deg) scale(1.2);
+		opacity: 1;
+	}
+}
   </style>
 </head>
 <body>
@@ -43,6 +111,16 @@
   <div class="section-list">
     <div class="section-title">Section Title</div>
     <div class="section-title">Section Title</div>
+  </div>
+
+  <h3 class="title">2. 链接悬停效果</h3>
+  <div class="wrapper">
+    <section class="hero">
+      <p>
+        <a href="https://www.jianshu.com/u/ecba077db988" class="link-1">链接1</a> and 
+        <a href="https://www.jianshu.com/p/efa04f548ac7" class="link-2">链接2</a>
+      </p>
+    </section>
   </div>
 
   <!-- 参考链接: https://ishadeed.com/article/unusual-use-cases-pseudo-elements/ -->
