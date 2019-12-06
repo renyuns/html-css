@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pseudo Elements-CSS伪元素</title>
+  <base href="/">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="author" content="renyun,ry.work@foxmail.com">
+  <meta name="keywords" content="html、html5、css、css3">
+  <meta name="description" content="Pseudo Elements,css 伪元素">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      padding: 20px;
+    }
+    .title {
+      color: #0d1a26;
+      font-weight: 500;
+      font-family: Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',sans-serif;
+    }
+    .section-title {
+      position: relative;
+      padding: 20px 30px;
+    }
+    .section-title:before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -10px;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: #1890ff;
+        border-radius: 100%;
+    }
+    .section-title:hover:before {
+        transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <h3 class="title">1. 父元素悬停效果-Parent-Child Hover Effect</h3>
+  <div class="section-list">
+    <div class="section-title">Section Title</div>
+    <div class="section-title">Section Title</div>
+  </div>
+
+  <!-- 参考链接: https://ishadeed.com/article/unusual-use-cases-pseudo-elements/ -->
+</body>
+</html>
